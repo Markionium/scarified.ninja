@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Starter</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="vendor/favicon.ico"/>
+
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css"/>
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"/>
+  <!-- endbuild -->
+
+  <!-- build:css css/app.css -->
+  <link rel="stylesheet" href="app.css"/>
+  <!-- endbuild -->
+</head>
+<body ng-app="d2-starter">
+
+<div id="menu" class="navbar navbar-inverse navbar-fixed-top" ng-controller="HeaderCtrl">
+  <div class="container">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">D2 Starter</a>
+    </div>
+
+    <ul class="nav navbar-nav">
+      <li ng-class="{ active: isActive('/bar') }"><a href="#/bar"><i class="fa fa-home"></i> Bar</a></li>
+      <li ng-class="{ active: isActive('/foo') }"><a href="#/foo"><i class="fa fa-edit"></i> Foo</a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <ul class="dropdown-menu">
+          <li><a href="#"> Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container" ng-view></div>
+
+<!-- build:js js/vendor.js -->
+<script src="vendor/jquery/jquery.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/angular-route/angular-route.js"></script>
+<script src="vendor/angular-animate/angular-animate.js"></script>
+<script src="vendor/angular-resource/angular-resource.js"></script>
+<!-- endbuild -->
+
+<!-- build:js js/app.js -->
+<script src="app.js"></script>
+<script src="components/header/header-controller.js"></script>
+<script src="components/bar/bar-controller.js"></script>
+<script src="components/foo/foo-controller.js"></script>
+<script src="components/common/pageheader-directive.js"></script>
+<script src="components/common/foobar-service.js"></script>
+<script src="components/common/upper-filter.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>
